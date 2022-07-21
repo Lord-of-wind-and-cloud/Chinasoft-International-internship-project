@@ -1,0 +1,24 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "page/dish/menu",
+          "pathName": "page/dish/menu",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

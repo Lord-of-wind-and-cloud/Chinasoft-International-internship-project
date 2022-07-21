@@ -1,0 +1,35 @@
+<view class="head">
+    <view> 
+        <image  src="http://{{image}}"></image>
+        </view>
+    <view class="container1">
+        <view class="dishId"  style="width: 211rpx; height: 71rpx; display: block; box-sizing: border-box">菜品编号：<input style="width: 146rpx; height: 71rpx; display: block; box-sizing: border-box; left: 371rpx; top: -12rpx; position: absolute"  type="text" placeholder="{{dishId}}" bindinput="dishId" />
+        </view>
+        <!-- <view class="sold">销量：{{sold}}</view> -->
+    </view>
+</view>
+<view class="container2" style="left: 1rpx; top: 188rpx; width: 750rpx; height: 120rpx; display: flex; box-sizing: border-box">
+    <view class="dishName" style="position: relative; left: 0rpx; top: -5rpx; width: 209rpx; height: 75rpx; display: block; box-sizing: border-box">
+        <input style="width: 172rpx; height: 71rpx; display: block; box-sizing: border-box; left: 3rpx; top: -10rpx; position: absolute"  type="text" placeholder="{{dishName}}" bindinput="dishName" /></view>
+    <picker bindchange="bindPickerChange" value="{{index}}" range="{{classify}}"><view class="dishName"  style="position: relative; left: 202rpx; top: -5rpx; width: 209rpx; height: 75rpx; display: block; box-sizing: border-box">{{classify[index]}}</view>
+    </picker>
+</view>
+<view class="introduction"  style="width: 750rpx; height: 560rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+    <view style="width:100%">
+        {{introduction}}
+    </view>
+   
+</view>
+<view class="container3" style="width: 750rpx; height: 188rpx;left: 0rpx; top: 782rpx">
+    <view style=" left: 12rpx; top: -2rpx; width: 235rpx; height: 92rpx; display: block; box-sizing: border-box">
+        <picker bindchange="DishChange" value="{{rIndex}}" range="{{recommend}}">
+            <view class="dishName"  style="position: relative; left: 0rpx; top: 40rpx; width: 209rpx; height: 75rpx; display: block; box-sizing: border-box">{{recommend[rIndex]}}</view>
+        </picker>
+    </view>
+    <view class="pricelable" style="width: 326rpx; height: 186rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">
+<label for="price">菜品价格:</label>
+    <input id="price" style="width: 68rpx; height: 59rpx; display: block; box-sizing: border-box; left: 160rpx; top: -5rpx;"  type="text" placeholder="{{price}}" bindinput="price" />
+￥</view>
+    </view>
+
+<view class="confirm" style="position: absolute; left: 582rpx; top: 1084rpx; width: 139rpx; height: 64rpx; display: block; box-sizing: border-box" bindtap="confirm">确定</view>

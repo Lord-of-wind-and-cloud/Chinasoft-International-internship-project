@@ -1,0 +1,33 @@
+{
+  "pages": [
+    "page/login/login",
+    "page/waiter/waiter",
+    "page/passDish/passDish",
+    "page/bill/bill",
+    "page/billList/billList",
+    "page/dish/dish",
+    "page/dish/menu",
+    "page/message/serverMessage",
+    "page/order/order",
+    "page/cookNews/cookNews",
+    "page/notice/notice",
+    "page/noticeList/noticeList"
+  
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#feb70f",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#efefef",
+    "backgroundTextStyle": "dark",
+    "navigationBarTitleText": "订餐demo"
+  },
+  "networkTimeout": {
+    "request": 10000,
+    "connectSocket": 10000,
+    "uploadFile": 10000,
+    "downloadFile": 10000
+  },
+  "debug": true,
+  "sitemapLocation": "sitemap.json",
+  "cloud": true
+}

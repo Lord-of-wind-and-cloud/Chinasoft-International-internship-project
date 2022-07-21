@@ -1,0 +1,43 @@
+<!-- <view class="container">
+    <view class="head" >
+        <view class="tableId" >发件人:{{message.senderName}}</view>
+        <view class="orderId" >订单编号:{{message.orderId}}</view>
+    </view>
+    <view class="title">{{message.title}}</view>
+    <view class="message">{{message.content}}</view>
+    <view class="post" bindtap="confirm">确认已读</view>
+</view> -->
+
+<!--logs.wxml-->
+<view class="container">
+	<view class="container-body space-content">
+	  <view class="space-top">
+	  	<view class="space-banner" bindtap="imgPreview">
+		  	<image src="https://gitee.com/li-meijin/pic-md/raw/master/5.png" mode="aspectFill" class="slide-image"/>
+	  	</view>
+  	  <view class="space-info">
+  	  	<view class="space-title">{{message.title}}</view>
+  	  	<view class="space-list">
+  	  		<view class="space-item">
+  	  			<text class="text-left">发送人：</text>
+  	  			<text class="text-right">{{message.senderName}}</text>
+  	  		</view>
+  	  		<view class="space-item">
+  	  			<text class="text-left">订单编号：</text>
+  	  			<text class="text-right">{{message.orderId}}</text>
+  	  		</view>
+  	  	</view>
+  	  </view>
+	  </view>
+	  <view class="space-block">
+	  	<view class="space-block-title">详细内容</view>
+	  	<view class="space-block-content">
+	  		<view class="space-passage">{{message.content}}</view>
+	  	</view>
+	  </view>
+	</view>
+	<view class="container-footer">
+		<text class="apply-btn" bindtap="confirm">标记已读</text>
+	</view>
+</view>
+

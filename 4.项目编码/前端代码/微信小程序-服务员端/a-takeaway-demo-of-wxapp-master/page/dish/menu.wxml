@@ -1,0 +1,7 @@
+<view class="dishList" wx:for="{{dishList}}" data-food="{{item}}" bindtap="dishDetail"  >
+    <image  src="http://{{item.image}}" style="width: 195rpx; height: 174rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx"></image>
+    <view class="items" style="width: 242rpx; height: 66rpx; display: block; box-sizing: border-box; left: 200rpx; top: 6rpx; position: absolute">{{item.foodName}}</view>
+    <!-- <view class="items" style="width: 150rpx; height: 66rpx; display: block; box-sizing: border-box; position: absolute; left: 443rpx; top: 0rpx">{{item.category}}</view> -->
+    <view class="items" style="width: 293rpx; height: 66rpx; display: block; box-sizing: border-box; position: absolute; left: 443rpx; top: 108rpx">菜品价格：{{item.price}}￥</view>
+	<!-- <view class="items" style="position: absolute; left: 195rpx; top: 108rpx; width: 150rpx; height: 66rpx; display: block; box-sizing: border-box" >是否推荐</view> -->
+</view>

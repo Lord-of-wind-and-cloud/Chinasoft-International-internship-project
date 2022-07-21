@@ -1,0 +1,57 @@
+<!--page/billList/billList.wxml-->
+<view class="container">
+
+
+	<scroll-view class="container-body" scroll-y="true" lower-threshold="50">
+		<view class="service-list">
+			<view class="service-item" 
+        wx:for="{{messageList}}" 
+        data-id="{{item.messageId}}"
+        bindtap="detail"
+      >
+				<view class="service-img">
+					<image src="https://636c-cloud1-6gqfwca6ea734cf6-1309852392.tcb.qcloud.la/image/%E5%8E%A8%E5%B8%88%E5%B8%BD.png?sign=4ca78523e745436c858d37881a4f06dc&t=1646814619" mode="widthFix"></image>
+				</view>
+				<view class="service-text">
+					<view class="service-tite">主题:{{item.title}}</view>
+
+					<text class="service-city">编号：{{item.messageId}}</text>					<view class="service-tags">
+						<text>发送者:{{item.sendUser}}</text>
+					</view>
+					<text class="service-city">状态：{{status[item.status]}}</text>	
+				</view>
+			</view>
+		</view>
+		<!-- <view class="gototop {{scrolltop>200?'active':''}}" bindtap="goToTop"></view> -->
+	</scroll-view>
+
+</view>
+
+
+
+
+<!-- <scroll-view class="goods-container" scroll-y="true">
+
+  <view wx:for="{{messageList}}" data-id="{{item.messageId}}" bindtap="detail" class="box"> 
+<view class="down">
+<view class="mId">
+ ID:{{item.orderId}}
+ </view>
+<view class="right">
+<view class="basicInfo">
+主题:{{item.title}}
+</view>
+</view><view class="right2">
+<view class="basicInfo">
+发送者:{{item.sendUser}}
+
+</view>
+</view><view class="right3">
+
+<button class="btn"> 查 看</button>
+
+</view>
+</view>
+</view>
+    </scroll-view>  -->
+

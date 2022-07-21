@@ -1,0 +1,80 @@
+<view class="container">
+	<view class="head">
+		<view class="guestNumber" >服务员编号：{{serverId}}</view>
+	<view class="tableIdBox">		
+		<view class="guestNumber "  style="width: 106rpx; height: 50rpx; display: flex; box-sizing: border-box; left: NaNrpx; top: NaNrpx">桌号:</view>
+	<input placeholder="{{tableId}}" bindinput="inputTId" style="width: 670rpx; height: 50rpx; display: block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"> </input>
+</view>
+
+		<view class="guestNumber" >用餐人数: 
+		</view>
+		<view class="head-container" >
+			<view class="reduce" bindtap="guestReduce" > - </view>
+			 <view class="number"  >  {{guestNumber}}
+		</view>
+			<view class="add" bindtap="guestAdd" > + </view>
+		</view>
+	</view>
+
+	<view class="content-container">
+		
+		<scroll-view class="classify-container" scroll-y="true">
+			<view class="classify {{classifySeleted==classify.id?'active':''}}" wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" data-id="{{classify.id}}" bindtap="tapClassify">
+				<view class="name">{{classify.classifyName}}</view>
+			</view>
+		</scroll-view>
+		<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+			<view wx:for="{{goodsList}}" wx:for-item="classify" wx:key="id" id="{{classify.id}}">
+				<view class="title">{{classify.classifyName}}</view>
+				<view class="goods" wx:for="{{classify.goods}}" wx:for-item="id" wx:key="*this" >
+					<view class="left"> 
+					<image class="pic" src="http://{{goods[id].image}}"></image> 
+					</view>
+					<view class="right" >
+					<view class="name ellipsis">{{goods[id].foodName}}</view>
+					<!-- <view > 1</view> -->
+					<view class="price">￥{{goods[id].price}}</view>
+					<view class="soldout" wx:if="{{!goods[id].isAvailable}}">已售罄</view>
+					<view class="num_container" wx:if="{{goods[id].isAvailable}}">
+						<image class="reduce" wx:if="{{cart.list[id]>0}}" src="/imgs/shop/reduce.png" bindtap="tapReduceCart" data-id="{{id}}" ></image>
+						<text  >{{cart.list[id]}}</text>
+						<image  class="add" src="/imgs/shop/add.png"  bindtap="tapAddCart" data-id="{{id}}" ></image>	
+					</view>
+				</view>
+			</view>
+			</view>
+		</scroll-view>
+	</view>
+	<view class="cart-detail" hidden="{{!showCartDetail||!cart.count}}" >
+		<view class="mask" bindtap="hideCartDetail"></view>
+		<view class="list">
+			<view class="item" wx:for="{{cart.list}}" wx:for-index="id" wx:for-item="num" wx:key="id">
+				<image src="http://{{goods[id].image}}"> </image>
+				<view class="name ellipsis">{{goods[id].foodName}}</view>
+				<view class="total">￥{{goods[id].price*cart.list[id]}}</view>
+				<view class="reduce" data-id="{{id}}" bindtap="tapReduceCart">-</view>
+				<view class="num">{{num}}</view>
+				<view class="add" data-id="{{id}}" bindtap="tapAddCart">+</view>
+			</view>
+		</view>
+	</view>
+	<view class="cart">
+		<view class="data" bindtap="showCartDetail">
+			<view class="icon">
+				<image src="/imgs/shop/cart.png"></image>
+				<view class="count">{{cart.count}}</view>
+			</view>
+			<view class="total">￥{{cart.total}}</view>
+		</view>
+		<view class="memo" bindtap="memo">订单备注</view>
+		<form bindsubmit="submit" report-submit="true">
+			<!--<view formType="submit" class="submit">确认订单</view>-->
+			<button class="yellow {{cart.count?'':'disabled'}}" formType="submit" disabled="{{!cart.count}}" >确认订单</button>
+		</form>
+	</view>
+</view>
+
+<view class="memoMessage" wx:if="{{memoVisible}}"  >
+	 <text > 备注: </text>
+	 <input  class="memoInput" value="{{memo}}" type="text" placeholder="请在此键入备注(15字以内)" bindinput="memoInput" />
+</view>

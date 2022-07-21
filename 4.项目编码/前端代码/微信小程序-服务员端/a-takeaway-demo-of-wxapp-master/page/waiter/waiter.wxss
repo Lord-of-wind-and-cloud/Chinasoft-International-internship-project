@@ -1,0 +1,71 @@
+/* page/waiter/waiter.wxss */
+.header {
+	background: #feb70f;
+	padding: 30rpx;
+	display: flex;
+}
+.header .avatar {
+	display: block;
+	/* margin: 0 auto; */
+	width: 160rpx;
+	height: 160rpx;
+	border-radius: 50%;
+	border: 4px solid #ffffff;
+}
+.header .userInfo{
+	color: rgb(48, 46, 46);
+	font-size: 15px;
+	line-height: 2.4;
+	/* text-align: center; */
+	padding:40rpx;
+	width: 520rpx; 
+	height: 206rpx; 
+	display: block;
+	box-sizing: border-box; 
+	left: NaNrpx;
+	top: NaNrpx
+}
+/* .header .nickname {
+	color: #000;
+	font-size: 22px;
+	line-height: 2.4;
+	text-align: center;
+} */
+
+.section {
+	padding: 0;
+	color: #2e2e2e;
+	font-size: 30rpx;
+}
+.section .line {
+	margin-left: 30rpx;
+	padding-right: 30rpx;
+	line-height: 3;
+	border-bottom: 1px solid #efefef;
+}
+.section .line:last-child {
+	border-bottom: none;
+}
+.section .line:before {
+	content: '>';
+	float: right;
+	color: #aaa;
+	margin-left: 20rpx;
+}
+.section .line .tl {
+	float: right;
+	color: #aaa;
+}
+.qcCode{
+	width: 54rpx; 
+	height: 50rpx; 
+	display: block; 
+	box-sizing: border-box; 
+	left: 0rpx; 
+	top: 0rpx
+}
+.nickname{
+	color:white;
+	font-size: 16px;
+	font-weight: 600;
+}

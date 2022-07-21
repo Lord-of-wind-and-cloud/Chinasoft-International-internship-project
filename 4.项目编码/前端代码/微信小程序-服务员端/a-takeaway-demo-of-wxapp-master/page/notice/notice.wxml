@@ -1,0 +1,37 @@
+<!-- <view class="container">
+    <view class="head" >
+        <view class="createTime" >时间:{{createTime}}</view>
+    </view>
+    <view class="title">{{title}}</view>
+    <view class="notice">{{notice}}</view>
+    <view class="confirm" bindtap="confirm">确认已读</view>
+</view> -->
+
+<view class="container">
+	<view class="container-body space-content">
+	  <view class="space-top">
+	  	<view class="space-banner" bindtap="imgPreview">
+		  	<image src="https://gitee.com/li-meijin/pic-md/raw/master/5.png" mode="aspectFill" class="slide-image"/>
+	  	</view>
+  	  <view class="space-info">
+  	  	<view class="space-title">{{title}}</view>
+  	  	<view class="space-list">
+  	  		<view class="space-item">
+  	  			<text class="text-left">发送时间</text>
+  	  			<text class="text-right">{{createTime}}</text>
+  	  		</view>
+  	  	</view>
+  	  </view>
+	  </view>
+	  <view class="space-block">
+	  	<view class="space-block-title">详细内容</view>
+	  	<view class="space-block-content">
+	  		<view class="space-passage">{{notice}}</view>
+	  	</view>
+	  </view>
+	</view>
+	<view class="container-footer">
+		<text class="apply-btn" bindtap="confirm">确定</text>
+	</view>
+</view>
+

@@ -1,0 +1,46 @@
+<!--page/passDish/passDish.wxml-->
+<view wx:for="{{dishList}}" class="box"> 
+  <view class="up">
+    <view class="tableId">桌号:{{item.tableId}}</view>
+    <view class="orderId" >订单编号:{{item.orderId}}</view>
+  </view> 
+  <view class="down">
+<view class="cuisine">
+ <image src="http://{{item.image}}" style="width: 150rpx; height: 144rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+  
+  
+</view>
+<view class="right">
+<view class="basicInfo">
+<view>菜品编号:{{item.foodId}}</view>
+<view>菜品名称:{{item.foodName}}</view>
+</view>
+<view class="btn">
+  <button  style="background-color: rgb(254,183,15); display: block; box-sizing: border-box; left: 200rpx; top: -6rpx; width: 148rpx; height: 84rpx; position: relative"   bindtap="passDish"  data-oid="{{item.orderId}}" data-fid="{{item.foodId}}" data-index="{{index}}"  loading="{{btnLoading}}"> 传菜 </button>
+</view>
+</view>
+</view>
+</view>
+
+
+
+<view class="cu-modal {{modalName=='DialogModal1'?'show':''}}">
+  <view class="cu-dialog">
+    <view class="cu-bar bg-white justify-end">
+      <view class="content">提示</view>
+      <view class="action" bindtap="hideModal">
+        <text class="cuIcon-close text-red"></text>
+      </view>
+    </view>
+    <view class="padding-xl">
+      是否要确认传菜？
+    </view>
+    <view class="cu-bar bg-white justify-end">
+      <view class="action">
+        <button class="cu-btn line-green text-green" bindtap="hideModal">取消</button>
+        <button class="cu-btn bg-green margin-left" bindtap="confirm">确定</button>
+
+      </view>
+    </view>
+  </view>
+</view>

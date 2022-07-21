@@ -1,0 +1,179 @@
+page/billList/billList.wxss
+/* .box{
+  width: 100%;
+  height: fit-content;
+	margin:4rpx;
+  border:3px solid rgb(218, 172, 86);
+}
+.up{
+  display:flex;
+}
+.btn{
+  display: flex;
+}
+.cuisine{
+  width: 20%;
+}
+.right{
+  width: 40%;
+  border-left:3px solid rgb(218, 172, 86);
+}
+.right2{
+  width: 40%;
+  border-left:3px solid rgb(218, 172, 86);
+}
+.right3{
+	width: 40%;
+  border-left:3px solid rgb(218, 172, 86);
+}
+.btn{
+	height: 40px;
+	color:white;
+	background-color: rgb(254,183,15);
+}
+.down{
+  display: flex;
+}
+
+.goods-container {
+	-webkit-flex: 1;
+	background: #ffffff;
+	height: 60%;
+}
+.goods-container .title {
+	padding: 20rpx 25rpx;
+	color: #646464;
+	font-size: 30rpx;
+	line-height: 30rpx;
+	background: #f7f7f7;
+}
+.goods-container .goods {
+	position: relative;
+	padding: 20rpx 30rpx;
+	font-size: 36rpx;
+	line-height: 40rpx;
+	border-bottom: 1px solid #f7f7f7;
+}
+.goods-container .goods .pic {
+	float: left;
+	width: 130rpx;
+	height: 130rpx;
+	margin-right: 20rpx;
+}
+.goods-container .goods .name {
+	color: #000;
+	font-size: 36rpx;
+	line-height: 46rpx;
+}
+.goods-container .goods .sold {
+	color: #989898;
+	font-size: 30rpx;
+	line-height: 46rpx;
+}
+.goods-container .goods .price {
+	color: #f45044;
+	font-size: 36rpx;
+	line-height: 46rpx;
+}
+.goods-container .goods .addCart {
+	position: absolute;
+	right: 30rpx;
+	bottom: 30rpx;
+	width: 64rpx;
+	height: 64rpx;
+	background: #feb70f;
+	border-radius: 50%;
+}
+.goods-container .goods .addCart image {
+	pointer-events: none;
+	position: absolute;
+	left: 20rpx;
+	top: 20rpx;
+	width: 24rpx;
+	height: 24rpx;
+}
+
+.bottom {
+	background: #f3c760;
+	padding: 30rpx;
+	height: 20%;
+}
+
+.bottom .userInfo{
+	color: rgb(48, 46, 46);
+	font-size: 15px;
+	line-height: 1.8;
+	padding:0rpx;
+
+	display: block;
+	box-sizing: border-box; 
+	left: NaNrpx;
+	top: NaNrpx
+} */
+page{
+	height: 100%;
+	color: #333;
+  display: flex;
+  flex-direction: column;
+ 	font: normal 30rpx/1.68 -apple-system-font, 'Helvetica Neue', Helvetica, 'Microsoft YaHei', sans-serif;
+}
+.container{
+	background-color: white;
+}
+.service-list{
+	padding: 0 20rpx;
+}
+.service-item{
+	display: flex;
+	padding: 20rpx 0; 
+	border-bottom: 1rpx solid #e8e8e8;
+	background-color: white;
+}
+.service-img{
+	width: 180rpx;
+}
+.service-item image{
+	width: 180rpx;
+	height: 126rpx;
+}
+.service-text{
+	flex: 1;
+	margin-left: 20rpx;
+	width: 100%;
+}
+.service-text .service-tite{
+	color: #333;
+	width: 100%;
+	font-size: 34rpx;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+.service-tags{
+	margin: 6rpx 0;
+}
+.service-tags text{
+	padding: 6rpx 16rpx;
+	border: 1rpx solid #f7982a;
+	line-height: 1;
+	color: #f7982a;
+	font-size: 28rpx;
+	border-radius: 4rpx;
+	margin-right: 10rpx;
+	margin-bottom: 10rpx;
+	white-space: nowrap;
+}
+.service-city{
+	color: #666;
+}
+.container {
+	flex: 1;
+  display: flex;
+  flex-direction: column;
+ 	box-sizing: border-box;
+}
+.container-body{
+	flex: 1;
+	overflow-y: auto;
+	overflow-x: hidden;
+}

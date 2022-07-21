@@ -1,0 +1,51 @@
+<!--page/bill/bill.wxml-->
+<!-- 顶部 -->
+<view class="header">
+  <view class="nickname">订单编号{{torder.orderId}}</view>	
+		<view class="userInfo" >
+		<view class="nickname">桌号{{torder.tableId}}</view>
+		<view class="nickname">用餐人数{{torder.numPeople}}</view>	
+  </view>
+  </view>
+ 
+ 
+
+ 
+<!-- 滚动视图 -->
+<scroll-view class="goods-container" scroll-y="true" scroll-into-view="{{classifyViewed}}" bindscroll="onGoodsScroll">
+ <!-- 列表项 -->
+  <view wx:for="{{foodList}}" class="box"> 
+  <!-- <view class="up">
+    <view>桌号</view>
+    <view>订单编号</view>
+  </view>
+  <view class="down">
+<view class="cuisine">
+ <image src="https://636c-cloud1-6gqfwca6ea734cf6-1309852392.tcb.qcloud.la/image/src%3Dhttp%20_pic.51yuansu.com_pic3_cover_01_81_65_596f6ed062f9d_610.jpg%26refer%3Dhttp%20_pic.51yuansu.com%26app%3D2002%26size%3Df9999%2C10000%26q%3Da80%26n%3D0%26g%3D0n%26fmt%3Djpeg.jpg?sign=1ac4751738b04cfacb4156e877d32d7d&t=1645931541" style="width: 150rpx; height: 144rpx; display: inline-block; box-sizing: border-box; left: NaNrpx; top: NaNrpx"></image>
+  
+  
+</view> -->
+<view class="right">
+<view class="basicInfo">
+<view>菜品名称:{{item.foodName}}</view>
+<view>菜品价格:{{item.price}}</view>
+</view>
+
+</view>
+</view>
+
+    </scroll-view>
+
+
+
+    <!-- 底部 -->
+    <view class="bottom">
+    <view>备注</view>
+ 	
+		<view class="userInfo"  >
+      <view class="nickname">服务员编号:{{id}}</view>
+		<view class="nickname">服务员姓名:{{name}}</view>
+    <view class="nickname">价格{{torder.totalPrice}}</view>	
+    <button class="cu-btn bg-orange shadow-blur round" style="width: 140rpx; position: relative; left: 551rpx; top: -80rpx" bindtap="bill">结算</button>
+  </view>
+  </view>

@@ -1,0 +1,24 @@
+<!--page/noticeList/noticeList.wxml-->
+
+<!-- 搜索框 -->
+
+<scroll-view class="container-body" scroll-y="true" lower-threshold="50">
+		<view class="service-list">
+      <view class="service-item" 
+      view wx:for="{{notice}}" data-id="{{item.noticeId}}" bindtap="detail" reversed>
+      <view class="service-img">
+					<image src="https://636c-cloud1-6gqfwca6ea734cf6-1309852392.tcb.qcloud.la/image/%E5%85%AC%E5%91%8A.png?sign=a31b0c6c8c4fadc2ce731a4dabf2a4b2&t=1646817512" mode="widthFix"></image>
+				</view>
+      <view class="service-text">
+        
+          <view class="service-tite">{{item.title}}</view>
+          <view class="service-tags{{item.status==0?'0':'1'}}">
+						<text>{{statusOn[item.status]}}</text>
+					</view>
+      </view>
+      <!-- <button class="btn"> 查 看</button>         -->
+      </view>
+    </view>
+</scroll-view>
+
+

@@ -1,0 +1,20 @@
+<!--page/waiter/waiter.wxml-->
+
+<view class="container">
+	<view class="header">
+		<!-- <image class="avatar" src="{{user.portrait}}" /> -->
+		<image class="avatar" src="http://{{user.portrait}}" />
+		<view class="userInfo" >
+		<view class="nickname">用户名:{{user.username}}</view>
+		<view class="nickname">服务员:{{user.userId}}</view>	
+	</view>
+	<image class="qcCode" bindtap="scan" src="https://636c-cloud1-6gqfwca6ea734cf6-1309852392.tcb.qcloud.la/image/%E6%89%AB%E4%B8%80%E6%89%AB.png?sign=a1edc2c81c62802093881bdb21a84c8d&t=1646810243"> </image>
+	</view>
+	<view class="section">
+		<view class="line judgement" bindtap="order">点餐</view>
+		<view class="line judgement" bindtap="billList">待结算订单</view>
+		<view class="line judgement" bindtap="dishPass">传菜信息</view>
+    <view class="line judgement" bindtap="serverMessage" >后厨信息</view>
+    <view class="line judgement" bindtap="notice">公告信息</view>
+	</view>
+</view>

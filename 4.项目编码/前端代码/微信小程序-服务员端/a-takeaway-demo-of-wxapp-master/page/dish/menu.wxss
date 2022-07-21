@@ -1,0 +1,62 @@
+
+
+.header {
+	display: -webkit-flex;
+	padding: 20rpx;
+	background: #fff;
+}
+
+.header .icon {
+	width: 40rpx;
+	height: 40rpx;
+	vertical-align: top;
+}
+
+.header .search {
+	-webkit-flex: 1;
+	color: #000;
+	font-size: 30rpx;
+	line-height: 40rpx;
+	padding: 10rpx;
+	border-radius: 10rpx;
+	background: #eee;
+}
+
+.header .search .icon {
+	float: left;
+	margin: 1rpx 5rpx 0 0;
+}
+
+.header button {
+	margin-left: 20rpx;
+	font-size: 30rpx;
+}
+
+.header input {
+	height: 30rpx;
+	min-height: 40rpx;
+}
+.dishList{
+    position: relative;
+	display: grid;
+	height: 100px;
+	border-bottom: 2px solid rgb(231, 167, 17);
+}
+.dishList image{
+    position: relative;
+}
+.dishList .items{
+    position: absolute;
+}
+.pricelable{
+	display: flex;
+}
+image{
+	border: 3px solid rgb(173, 125, 10);
+	border-radius: 15px;
+	margin: 6rpx;
+}
+
+.items{
+margin: 20rpx;
+}

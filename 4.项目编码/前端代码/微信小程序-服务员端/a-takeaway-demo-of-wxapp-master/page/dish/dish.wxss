@@ -1,0 +1,83 @@
+
+.head{
+    display: flex;
+    height: 80px;
+}
+
+.head image{
+    height: 80px;
+    width: 80px;
+}
+.head .container1{
+    display: grid;
+}
+.head .container1 .dishId{
+    height: 30px;
+}
+
+.head .container1 .dishId input{
+
+    height: 30px;
+}
+
+.head .container1 .sold{
+    height: 30px;
+}
+ .container2{
+    
+    display: flex;
+    height: 100px;
+    border-top:3px solid rgb(231, 167, 17);
+    border-bottom:3px solid rgb(231, 167, 17);
+
+}
+.dishName{
+  
+    left: 20%;
+}
+.dishName input{
+    height: 30px;
+}
+
+.introduction{
+    display: flex;
+    border-bottom: 3px solid rgb(231, 167, 17);
+
+}
+.container3{
+   
+    display: flex;
+    border-bottom: 3px solid rgb(231, 167, 17);
+
+}
+.container3.price{
+    display: flex;
+    position: relative;
+}
+.container3 view{
+    width: 100px;
+}
+
+.confirm{
+    position: absolute;
+    border: 3px solid rgb(231, 167, 17);
+    border-radius: 15px;
+    text-align:center;
+    background-color: rgb(231, 167, 17);
+    
+}
+.confirm view{
+    position: absolute;
+    left: 50%;
+}
+.pricelable{
+    display: flex;
+}
+image{
+    border: 3px solid rgb(173, 125, 10);
+    border-radius: 15px;
+}
+label{
+    border-left:3px solid rgb(231, 167, 17);
+}
+
